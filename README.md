@@ -1,46 +1,86 @@
-# Getting Started with Create React App
+Ventixe - Eventhanteringssystem (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Detta projekt utgör frontend-delen av ett MVP-system för hantering av event, utvecklat som en del av kursen Molntjänster och distribuerade system.
 
-## Available Scripts
+🌐 Deployment
 
-In the project directory, you can run:
+Frontend: http://localhost:3000
 
-### `npm start`
+Backend (exempel): http://localhost:5001
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🚀 Funktioner
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Inloggning och registrering (JWT-baserad)
 
-### `npm test`
+Skyddade sidor ("Protected Route")
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Hämtning och listning av events via Axios
 
-### `npm run build`
+TailwindCSS-baserad UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React Router för navigering mellan sidor
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📁 Struktur
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ventixe-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   └── EventList.tsx
+│   ├── Pages/
+│   │   ├── Home.tsx
+│   │   ├── Login.tsx
+│   │   ├── Register.tsx
+│   │   └── Protected.tsx
+│   ├── index.tsx
+│   ├── index.css
+├── tailwind.config.js
+├── postcss.config.js
+├── craco.config.js
+├── package.json
 
-### `npm run eject`
+🔧 Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Klona repo:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone <REPO-URL>
+cd ventixe-frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Installera beroenden:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+npm install
 
-## Learn More
+Starta utvecklingsservern:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔍 Exempel: Hämta events
+
+axios.get<Event[]>("http://localhost:5001/api/events")
+  .then(res => setEvents(res.data))
+  .catch(err => console.error(err));
+
+🌈 TailwindCSS
+
+Tailwind är integrerat via CRACO. Du kan använda utility-klasser direkt:
+
+<div className="bg-blue-500 text-white p-6 rounded-xl">
+  Tailwind fungerar!
+</div>
+
+✅ Att göra (vidareutveckling)
+
+Validering av formulär
+
+Användarprofil
+
+Deployment till Azure Static Web Apps
+
+Responsiv design enligt Figma-prototyp
+
+📄 Licens
+
+MIT
+
+Skapad av Zeba för EDU-projektet Ventixe • 2025
+
