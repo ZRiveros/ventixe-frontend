@@ -1,4 +1,3 @@
-// src/Pages/Events.tsx
 import EventCard from "../components/EventCard";
 import Sidebar from "../components/Sidebar";
 
@@ -18,7 +17,7 @@ export default function Events() {
       price: "$50",
       progress: 75,
     },
-    // Lägg till fler events om du vill...
+
   ];
 
   return (

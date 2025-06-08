@@ -19,7 +19,7 @@ const LoginForm = () => {
       localStorage.setItem("token", token);
       setMessage("Inloggning lyckades!");
 
-      // Du kan t.ex. redirecta till en skyddad route här
+
     } catch (error: any) {
       setMessage("Felaktigt användarnamn eller lösenord.");
     }

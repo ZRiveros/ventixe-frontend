@@ -15,7 +15,7 @@ export default function Home() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    axios.get<Event[]>("https://localhost:5001/api/events") // ← ändra om du kör på annan port
+    axios.get<Event[]>("https://localhost:5001/api/events")
       .then(res => setEvents(res.data))
       .catch(err => console.error("Error fetching events:", err));
   }, []);

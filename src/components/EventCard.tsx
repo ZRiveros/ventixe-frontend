@@ -1,4 +1,3 @@
-// src/components/EventCard.tsx
 interface EventCardProps {
   title: string;
   location: string;
