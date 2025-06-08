@@ -84,3 +84,9 @@ MIT
 
 Skapad av Zeba för EDU-projektet Ventixe • 2025
 
+## 🌐 Deployment
+
+- Frontend: http://localhost:3000
+- Backend (exempel): http://localhost:5001
+
+> ⚠️ MVP:n är ännu inte publicerad till Azure. Publiceringslänk kommer att uppdateras här vid komplettering.
