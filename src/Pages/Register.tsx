@@ -10,10 +10,10 @@ export default function Register() {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5047/api/users/register", {
-        username,
-        password,
-      });
+    await axios.post("http://localhost:5047/api/users/register", {
+      username,
+      password,
+    });
 
       alert("Registrering lyckades! Du kan nu logga in.");
       navigate("/login");
