@@ -15,7 +15,7 @@ export default function Home() {
   const [events, setEvents] = useState<Event[]>([]);
 
   useEffect(() => {
-    axios.get<Event[]>("https://localhost:5001/api/events")
+    axios.get<Event[]>("http://localhost:5001/api/events")
       .then(res => setEvents(res.data))
       .catch(err => console.error("Error fetching events:", err));
   }, []);
@@ -24,9 +24,10 @@ export default function Home() {
     <div>
       <h2>Kommande Event</h2>
       <EventList events={events} />
+
+      <div className="p-8 bg-blue-500 text-white rounded-xl mt-4">
+        🎉 Tailwind fungerar!
+      </div>
     </div>
   );
 }
-<div className="p-8 bg-blue-500 text-white rounded-xl">
-  🎉 Tailwind fungerar!
-</div>
