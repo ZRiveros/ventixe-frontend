@@ -1,27 +1,27 @@
-Ventixe - Eventhanteringssystem (Frontend)
+# Ventixe - Eventhanteringssystem (Frontend)
 
-Detta projekt utgör frontend-delen av ett MVP-system för hantering av event, utvecklat som en del av kursen Molntjänster och distribuerade system.
+Detta projekt utgör frontend-delen av ett MVP-system för hantering av event, utvecklat som en del av kursen *Molntjänster och distribuerade system*.
 
-🌐 Deployment
+## 🌍 Publicerad MVP
 
-Frontend: http://localhost:3000
+👉 [https://black-pebble-0e114a103.6.azurestaticapps.net](https://black-pebble-0e114a103.6.azurestaticapps.net)
 
-Backend (exempel): http://localhost:5001
+## 🌐 Deployment
 
-🚀 Funktioner
+* Frontend: [http://localhost:3000](http://localhost:3000)
+* Backend (exempel): [http://localhost:5001](http://localhost:5001)
 
-Inloggning och registrering (JWT-baserad)
+## 🚀 Funktioner
 
-Skyddade sidor ("Protected Route")
+* Inloggning och registrering (JWT-baserad)
+* Skyddade sidor ("Protected Route")
+* Hämtning och listning av events via Axios
+* TailwindCSS-baserad UI
+* React Router för navigering mellan sidor
 
-Hämtning och listning av events via Axios
+## 📁 Struktur
 
-TailwindCSS-baserad UI
-
-React Router för navigering mellan sidor
-
-📁 Struktur
-
+```
 ventixe-frontend/
 ├── public/
 ├── src/
@@ -38,55 +38,58 @@ ventixe-frontend/
 ├── postcss.config.js
 ├── craco.config.js
 ├── package.json
+```
 
-🔧 Installation
+## 🔧 Installation
 
-Klona repo:
+1. **Klona repo:**
 
-git clone <REPO-URL>
-cd ventixe-frontend
+   ```bash
+   git clone <REPO-URL>
+   cd ventixe-frontend
+   ```
 
-Installera beroenden:
+2. **Installera beroenden:**
 
-npm install
+   ```bash
+   npm install
+   ```
 
-Starta utvecklingsservern:
+3. **Starta utvecklingsservern:**
 
-npm start
+   ```bash
+   npm start
+   ```
 
-🔍 Exempel: Hämta events
+## 🔍 Exempel: Hämta events
 
+```ts
 axios.get<Event[]>("http://localhost:5001/api/events")
   .then(res => setEvents(res.data))
   .catch(err => console.error(err));
+```
 
-🌈 TailwindCSS
+## 🌈 TailwindCSS
 
-Tailwind är integrerat via CRACO. Du kan använda utility-klasser direkt:
+Tailwind är integrerat via `CRACO`. Du kan använda utility-klasser direkt:
 
+```jsx
 <div className="bg-blue-500 text-white p-6 rounded-xl">
   Tailwind fungerar!
 </div>
+```
 
-✅ Att göra (vidareutveckling)
+## ✅ Att göra (vidareutveckling)
 
-Validering av formulär
+* Validering av formulär
+* Användarprofil
+* Deployment till Azure Static Web Apps
+* Responsiv design enligt Figma-prototyp
 
-Användarprofil
-
-Deployment till Azure Static Web Apps
-
-Responsiv design enligt Figma-prototyp
-
-📄 Licens
+## 📄 Licens
 
 MIT
 
-Skapad av Zeba för EDU-projektet Ventixe • 2025
+---
 
-## 🌐 Deployment
-
-- Frontend: http://localhost:3000
-- Backend (exempel): http://localhost:5001
-
-> ⚠️ MVP:n är ännu inte publicerad till Azure. Publiceringslänk kommer att uppdateras här vid komplettering.
+Skapad av **Zeba** för EDU-projektet Ventixe • 2025
